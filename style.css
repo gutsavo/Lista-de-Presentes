@@ -1,0 +1,194 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: #333;
+}
+
+/* ===== FOTOS FULL WIDTH ===== */
+.full img {
+    width: 100%;
+    display: block;
+}
+
+.foto-central {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.foto-central img {
+    width: 250px;
+    max-width: 90%;
+}
+
+.nomes {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.nomes img {
+    width: 1000px;
+    max-width: 90%;
+}
+
+/* ===== TEXTO ===== */
+.texto {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* ===== LISTA DE PRESENTES ===== */
+.presentes-section {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.presentes-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.presentes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.presente {
+    padding: 20px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 0px 15px rgba(72, 83, 94, 0.409);
+}
+
+.presente h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+.presente p {
+    margin-bottom: 15px;
+    font-family: 'Lato', sans-serif;
+}
+
+.presente img {
+    width: 100%;
+    max-width: 160px;   /* controla o tamanho */
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.presente button {
+    padding: 8px 14px;
+    border: 1px solid #333;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.presente button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+    background-color: #333;
+    color: #fff;
+}
+
+/* ===== BOTÃO CARRINHO ===== */
+.cart-button {
+    position: fixed;
+    bottom: 500px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: red;
+    color: #fff;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== DRAWER DO CARRINHO ===== */
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    left: -320px; /* começa fora da tela */
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 4px 0 16px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.cart-drawer.open {
+    left: 0; /* entra na tela */
+}
+
+.cart-drawer ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.cart-drawer li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-drawer li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.pix-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}

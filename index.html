@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Bianka & Márcio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ===== BLOCO 1 – DUAS FOTOS FULL WIDTH ===== -->
+<section class="full">
+    <img src="img/foto1.jpg" alt="Foto 1">
+</section>
+
+<section class="nomes">
+    <img src="Head.png" alt="Foto 2">
+</section>
+
+<!-- ===== TEXTO ===== -->
+<section class="texto">
+    <p>
+        Criamos esse site para compartilhar com vocês os detalhes da organização do nosso casamento.
+        Estamos muito felizes e contamos com a presença de todos no nosso grande dia!
+        Aqui você encontrará também dicas para hospedagem, salão de beleza, trajes,
+        estacionamento, entre outras informações importantes.
+    </p>
+</section>
+
+<!-- ===== BLOCO 2 – MAIS DUAS FOTOS FULL WIDTH ===== -->
+<section class="full">
+    <img src="img/foto3.jpg" alt="Foto 3">
+</section>
+
+<section class="foto-central">
+    <img src="Lista.png" alt="Foto 4">
+</section>
+
+<!-- ===== LISTA DE PRESENTES ===== -->
+<section class="presentes-section">
+    <div class="presentes">
+        <div class="presente">
+            <img src="Presentes/Julios.webp" alt="Lua de Mel">
+            <h3>Lua de Mel</h3>
+            <p>R$ 1,00</p>
+            <button onclick="adicionarCarrinho('Lua de Mel', 1)">
+                Presentear
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ===== BOTÃO FLUTUANTE DO CARRINHO ===== -->
+<div class="cart-button" onclick="toggleCarrinho()">
+    🛒
+    <span id="cart-count" class="cart-count"></span>
+</div>
+
+<!-- ===== ABA LATERAL DO CARRINHO ===== -->
+<div id="cart-drawer" class="cart-drawer">
+    <h2>Seu carinho 💙</h2>
+
+    <ul id="cart-items"></ul>
+
+    <div class="cart-total">
+        Total: R$ <span id="cart-total">0</span>
+    </div>
+
+    <button class="pix-button" onclick="finalizarPix()">
+        Finalizar no Pix
+    </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
