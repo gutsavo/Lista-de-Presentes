@@ -106,7 +106,7 @@ body {
     font-size: 18px;
     margin: 10px 0;
     font-family: 'Lato', sans-serif;
-    min-height: 48px;   /* força mesma altura */
+    min-height: 48px;
 }
 
 .presente p {
@@ -118,13 +118,13 @@ body {
 .presente img {
     width: 100%;
     max-width: 160px;
-    height: 140px;          /* 🔥 altura fixa */
-    object-fit: contain;   /* mantém proporção */
+    height: 140px;
+    object-fit: contain;
     margin-bottom: 15px;
 }
 
 .presente button {
-    margin-top: auto;   /* 🔥 cola no fundo */
+    margin-top: auto;
     padding: 8px 14px;
     border: 1px solid #333;
     cursor: pointer;
@@ -159,7 +159,7 @@ body {
     font-size: 24px;
     cursor: pointer;
     z-index: 1000;
-        transition: 
+    transition: 
         transform 0.25s ease,
         box-shadow 0.25s ease,
         background-color 0.25s ease,
@@ -191,7 +191,7 @@ body {
 .cart-drawer {
     position: fixed;
     top: 0;
-    left: -320px; /* começa fora da tela */
+    left: -320px;
     width: 300px;
     height: 100%;
     background: #fff;
@@ -199,10 +199,11 @@ body {
     padding: 20px;
     transition: left 0.3s ease;
     z-index: 999;
+    overflow-y: auto;
 }
 
 .cart-drawer.open {
-    left: 0; /* entra na tela */
+    left: 0;
 }
 
 .cart-drawer ul {
@@ -236,4 +237,73 @@ body {
     background: #333;
     color: #fff;
     cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+
+    .nomes {
+        margin: 30px 0;
+    }
+
+    .texto {
+        margin: 30px auto;
+        font-size: 15px;
+    }
+
+    /* Grid vira 2 colunas no celular */
+    .presentes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        padding: 0 4px;
+    }
+
+    .presente {
+        padding: 12px;
+    }
+
+    .presente h3 {
+        font-size: 13px;
+        min-height: 40px;
+    }
+
+    .presente p {
+        font-size: 13px;
+    }
+
+    .presente img {
+        height: 100px;
+    }
+
+    .presente button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    /* Carrinho ocupa tela inteira no mobile */
+    .cart-drawer {
+        width: 100%;
+        left: -100%;
+    }
+
+    .cart-drawer.open {
+        left: 0;
+    }
+
+    /* Botão do carrinho mais acessível no mobile */
+    .cart-button {
+        bottom: 24px;
+        right: 16px;
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+}
+
+/* Tablet: 3 colunas */
+@media (min-width: 601px) and (max-width: 900px) {
+    .presentes {
+        grid-template-columns: repeat(3, minmax(160px, 200px));
+        gap: 16px;
+    }
 }
