@@ -1,7 +1,7 @@
 /* =============================
    CONFIGURAÇÕES DO PIX
 ============================= */
-const PIX_CHAVE = "20722447736";
+const PIX_CHAVE = "c9ebe457-4f4a-43a3-b3e6-5df83accf148";
 const PIX_NOME = "BIANKA";
 const PIX_CIDADE = "RIODEJANEIRO";
 
@@ -157,3 +157,4 @@ function copiarPix(texto) {
     navigator.clipboard.writeText(texto);
     alert("Código Pix copiado 💙");
 }
+
